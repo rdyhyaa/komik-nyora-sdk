@@ -48,7 +48,7 @@ app.get('/api/pages', async (req, res) => {
   }
 });
 
-// Serve file statis (index.html)
-app.use(express.static('public'));
+// Serve file statis dari root folder
+app.use(express.static(__dirname));
 
 app.listen(3000, () => console.log('Server berjalan di port 3000'));
